@@ -1,3 +1,4 @@
+# Here in these code we perform the data transformation in these projects so that we can automate the process of data..
 import sys, os
 from dataclasses import dataclass
 import numpy as np
@@ -10,6 +11,8 @@ from src.exception import CustomException
 from src.logger import logging
 from src.utils import save_object
 
+
+# DatatransformationConfig we will give the input of the data..
 @dataclass
 class DataTransformationConfig:
     preprocessor_obj_file_path = os.path.join('artifacts', 'preprocessor.pkl')
@@ -18,6 +21,8 @@ class DataTransformation:
     def __init__(self):
         self.data_transformation_config = DataTransformationConfig()
 
+
+# These function will help to create an pickle file of the data transformation...
     def get_data_transformer_object(self):
         try:
             numerical_columns = ['writing_score', 'reading_score']
