@@ -1,5 +1,4 @@
 # Here we read the data from the file and automate that data so that we can user these here as well....
-
 import os 
 import sys
 from src.exception import CustomException
@@ -63,4 +62,4 @@ if __name__ == "__main__":
     train_arr,test_arr,_= data_transformation.initiate_data_transformation(train_data, test_data)
 
     modeltrainer = ModelTrainer()
-    modeltrainer.initiate_model_trainer(train_arr,test_arr)
+    print(modeltrainer.initiate_model_trainer(train_arr,test_arr))
